@@ -89,6 +89,12 @@ void handle_command_sequence(char input_char, char previous_char, char *output_c
     if (forward == NULL)
         forward = &unused_bool;
 
+    /////
+    //printf("%d\n", input_char);
+    //*forward = false;
+    //return;
+    /////
+
     /* Handle escape key commands */
     if (previous_char == KEY_CTRL_T)
     {

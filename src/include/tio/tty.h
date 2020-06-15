@@ -32,7 +32,8 @@
 #define KEY_S 0x73
 #define KEY_T 0x74
 #define KEY_SHIFT_T 0x54
-#define KEY_CTRL_T 0x14
+//#define KEY_CTRL_T 0x14
+#define KEY_CTRL_T 0x1
 #define KEY_V 0x76
 
 #define NORMAL 0
