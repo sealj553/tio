@@ -238,7 +238,7 @@ Changes since tio v1.20:
 
  * Add support for hexadecimal mode
 
-   A new key command 'ctrl-t h' is introduced which toggles between
+   A new key command 'ctrl-a h' is introduced which toggles between
    hexadecimal mode and normal mode. When in hexadecimal mode data received
    will be printed in hexadecimal.
 
@@ -253,7 +253,7 @@ Changes since tio v1.20:
 
 Adam Borowski:
 
- * 'ctrl-t b' to send serial break.
+ * 'ctrl-a b' to send serial break.
 
 Jakub Wilk:
 
@@ -291,15 +291,15 @@ Changes since tio v1.18:
 
    Rearranged the key commands:
 
-   ctrl-t c (clear screen) is now
-   ctrl-t l which is similar to the well known shell ctrl-l
+   ctrl-a c (clear screen) is now
+   ctrl-a l which is similar to the well known shell ctrl-l
 
-   ctrl-t i (show settings information) is now
-   ctrl-t c (show configuration)
+   ctrl-a i (show settings information) is now
+   ctrl-a c (show configuration)
 
    Updated man page accordingly.
 
- * Added "ctrl-t c" key command to clear screen
+ * Added "ctrl-a c" key command to clear screen
 
 
 
@@ -431,7 +431,7 @@ Changes since tio v1.13:
 
    Fixed launch hints not being printed in no autoconnect mode.
 
- * Added 'ctrl-t ?' to list available commands
+ * Added 'ctrl-a ?' to list available commands
 
  * Fixed log mechanism
 
@@ -468,7 +468,7 @@ Changes since tio v1.12:
 
  * Added key command for showing session settings
 
-   A new key command "ctrl-t i" is added to allow the user to display the
+   A new key command "ctrl-a i" is added to allow the user to display the
    various session settings information (baudrate, databits, log file, etc.).
 
    This is useful in case you have a running session but have forgotten
@@ -486,18 +486,18 @@ Changes since tio v1.11:
 
    Replaced with nanosleep()
 
- * Added simple tx/rx statistics command (ctrl-t s)
+ * Added simple tx/rx statistics command (ctrl-a s)
 
    To display the total number of bytes transmitted/received simply perform the
-   'ctrl-t s' command sequence.
+   'ctrl-a s' command sequence.
 
    This feature can be useful when eg. trying to detect non-printable
    characters.
 
  * Further simplification of key handling
 
-   Changed so that the "ctrl-t ctrl-t" sequence is now simply "ctrl-t t" to
-   send the ctrl-t key code. This is inspired by screen which does similar
+   Changed so that the "ctrl-a ctrl-a" sequence is now simply "ctrl-a t" to
+   send the ctrl-a key code. This is inspired by screen which does similar
    to send its command key code (ctrl-a a).
 
    This change also eases adding new key commands if needed.
@@ -563,7 +563,7 @@ Jakub Wilk:
 
    Set "tainted" if and only if any character was read from the device.
 
-   Ctrl-t is no longer sent to the device on exit, so the trick to avoid
+   ctrl-a is no longer sent to the device on exit, so the trick to avoid
    its echo is not necessary.
 
    Characters read from stdin don't directly affect output, so they
@@ -586,19 +586,19 @@ Changes since tio v1.7:
 
  * Fixed log_open() prototype
 
- * Fixed index error wrt ctrl-t detection
+ * Fixed index error wrt ctrl-a detection
 
- * Fixed handling of ctrl-t
+ * Fixed handling of ctrl-a
 
-   Before, when exercising the quit key sequence (ctrl-t + q) the ctrl-t code
+   Before, when exercising the quit key sequence (ctrl-a + q) the ctrl-a code
    (0x14) would be sent.
 
    This is now fixed so that it is not sent.
 
-   However, in case it is needed to send ctrl-t to the device it is possible by
-   simply repeating the ctrl-t.
+   However, in case it is needed to send ctrl-a to the device it is possible by
+   simply repeating the ctrl-a.
 
-   Meaning, ctrl-t + ctrl-t = ctrl-t sent to device.
+   Meaning, ctrl-a + ctrl-a = ctrl-a sent to device.
 
  * Improved error handling
 
@@ -652,7 +652,7 @@ Changes since tio v1.6:
    After renaming to "tio" it makes sense to change the escape key
    accordingly. Hence, the new escape key is ^t.
 
-   Meaning, in session, its now ctrl-t + q to quit.
+   Meaning, in session, its now ctrl-a + q to quit.
 
 Jakub Wilk:
 

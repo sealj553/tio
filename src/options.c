@@ -72,7 +72,7 @@ void print_help(char *argv[])
     printf("\n");
     printf("See the man page for list of supported mapping flags.\n");
     printf("\n");
-    printf("In session, press ctrl-t q to quit.\n");
+    printf("In session, press ctrl-a q to quit.\n");
     printf("\n");
 }
 

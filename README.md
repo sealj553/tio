@@ -39,7 +39,7 @@ The commandline interface is straightforward as reflected in the output from
 
     See the man page for list of supported mapping flags.
 
-    In session, press ctrl-t q to quit.
+    In session, press ctrl-a q to quit.
 ```
 
 The only option which requires a bit of elaboration is perhaps the
@@ -54,7 +54,7 @@ connection is lost.
 
 Tio features full bash autocompletion support.
 
-Tio also supports various key commands. Press ctrl-t ? to list the available
+Tio also supports various key commands. Press ctrl-a ? to list the available
 key commands.
 
 See the tio man page for more details.
